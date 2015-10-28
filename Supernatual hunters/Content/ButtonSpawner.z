@@ -1,0 +1,50 @@
+class ButtonSpawner : ZilchComponent
+{
+    var Speed : Real = 50;
+    var Direction : Real3 = Real3(0.0,0.0,0.0);
+
+    function Initialize(init : CogInitializer)
+    {
+        this.Direction = Real3(0, this.Speed, 0);
+        Zero.Connect(Zero.Keyboard, Events.KeyDown, this.OnKeyDown);
+        //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+    }
+    
+    function OnKeyDown(event : KeyboardEvent)
+    {
+        
+            if(Zero.Keyboard.KeyIsPressed(Keys.A))
+            {
+                this.Direction = Real3(-this.Speed,0,0);
+            }
+            if(Zero.Keyboard.KeyIsPressed(Keys.D))
+            {
+                this.Direction = Real3(this.Speed,0,0);
+            }
+            if(Zero.Keyboard.KeyIsPressed(Keys.W))
+            {
+                this.Direction = Real3(0,this.Speed,0);
+            }
+            if(Zero.Keyboard.KeyIsPressed(Keys.S))
+            {
+                this.Direction = Real3(0,-this.Speed,0);
+            }
+        if(event.Key == Keys.Space)
+        {
+            var spawnPosition = this.Owner.Transform.Translation;
+            var archetypeToSpawn = Archetype.Find("bullet1");
+            var createdBullet = this.Space.CreateAtPosition(archetypeToSpawn, spawnPosition);
+            var forward = this.Owner.Orientation.WorldForward;
+            //Console.WriteLine(forward);
+            forward.X += this.Direction.X;
+            forward.Y += this.Direction.Y;
+            //Console.WriteLine(forward);
+            createdBullet.RigidBody.Velocity = forward;
+
+        }
+    }
+}

@@ -1,0 +1,54 @@
+class FaceDirection : ZilchComponent
+{
+    //must have 2 sprite source
+    function Initialize(init : CogInitializer)
+    {
+        
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        //if player hit down key.
+        if(Zero.Keyboard.KeyIsPressed(Keys.S))
+        {
+            //player face down.
+            //Console.WriteLine("you hit down");
+            var temp = this.Owner.Transform;
+            this.Owner.Sprite.FlipX = false;
+            this.Owner.Sprite.SpriteSource = SpriteSource.Find("player");
+            this.Owner.Sprite.FlipY = true;
+        }
+        //if player hit up key.
+        if(Zero.Keyboard.KeyIsPressed(Keys.W))
+        {
+            //player face up.
+            //Console.WriteLine("you hit up");
+            var temp = this.Owner.Transform;
+            this.Owner.Sprite.FlipX = false;
+            this.Owner.Sprite.SpriteSource = SpriteSource.Find("player");
+            this.Owner.Sprite.FlipY = false;
+            
+        }
+        //if player hit left key.
+        if(Zero.Keyboard.KeyIsPressed(Keys.A))
+        {
+            //player face left.
+            //Console.WriteLine("you hit left");
+            var temp = this.Owner.Transform;
+            this.Owner.Sprite.FlipY = false;
+            this.Owner.Sprite.SpriteSource = SpriteSource.Find("player 1");
+            this.Owner.Sprite.FlipX = true;
+        }
+        //if player hit right key.
+        if(Zero.Keyboard.KeyIsPressed(Keys.D))
+        {
+            //player face right.
+            //Console.WriteLine("you hit right");
+            var temp = this.Owner.Transform;
+            this.Owner.Sprite.FlipY = false;
+            this.Owner.Sprite.SpriteSource = SpriteSource.Find("player 1");
+            this.Owner.Sprite.FlipX = false;
+        }
+     }
+}

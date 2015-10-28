@@ -1,0 +1,15 @@
+class Heath : ZilchComponent
+{
+    //heath = 10
+    [Property]
+    var Health : Integer = 10;
+    
+    function Initialize(init : CogInitializer)
+    {
+        //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+    }
+}

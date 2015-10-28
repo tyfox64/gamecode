@@ -1,0 +1,26 @@
+class Stab : ZilchComponent
+{
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(Zero.Keyboard.KeyIsPressed(Keys.Alt))
+        if(this.Owner.Sprite.SpriteSource == SpriteSource.Find("player"))
+        this.Owner.Sprite.SpriteSource = SpriteSource.Find ("image12");
+        
+        if(Zero.Keyboard.KeyIsReleased(Keys.Alt))
+        if(this.Owner.Sprite.SpriteSource == SpriteSource.Find ("image12"))
+        this.Owner.Sprite.SpriteSource = SpriteSource.Find ("player");
+    
+        if(Zero.Keyboard.KeyIsPressed(Keys.Alt))
+        if(this.Owner.Sprite.SpriteSource == SpriteSource.Find("player 1"))
+        this.Owner.Sprite.SpriteSource = SpriteSource.Find ("image15");
+        
+        if(Zero.Keyboard.KeyIsReleased(Keys.Alt))
+        if(this.Owner.Sprite.SpriteSource == SpriteSource.Find ("image15"))
+        this.Owner.Sprite.SpriteSource = SpriteSource.Find ("player 1");
+    }
+}

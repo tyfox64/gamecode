@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "FaceDirection",
+		uint64 ResourceId = 5604080365d809a6,
+	},
+},

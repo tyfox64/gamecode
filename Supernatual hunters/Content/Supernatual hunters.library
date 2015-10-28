@@ -1,0 +1,7 @@
+ContentLibrary = 
+{
+	string Name = "Supernatual hunters",
+	uint64 LibraryId = 561d2fa42c2921f5,
+	string SourceControlType = "",
+	bool ReadOnly = false,
+},

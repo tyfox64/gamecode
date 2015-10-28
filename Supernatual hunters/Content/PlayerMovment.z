@@ -1,0 +1,48 @@
+class PlayerMovment : ZilchComponent
+{
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        //when player hits w
+        if(Zero.Keyboard.KeyIsPressed(Keys.W))
+        {
+            //player move up
+            //Console.WriteLine("you press W");
+            var temp = this.Owner.Transform.Translation;
+            temp.Y +=1;
+            this.Owner.Transform.Translation = temp;
+        }
+        //when player hits d
+        if(Zero.Keyboard.KeyIsPressed(Keys.D))
+        {
+            //player move right
+            //Console.WriteLine("you press D");
+            var temp = this.Owner.Transform.Translation;
+            temp.X +=1;
+            this.Owner.Transform.Translation = temp;
+        }
+                //when player hits S
+        if(Zero.Keyboard.KeyIsPressed(Keys.S))
+        {
+            //player move down
+            //Console.WriteLine("you press S");
+            var temp = this.Owner.Transform.Translation;
+            temp.Y -=1;
+            this.Owner.Transform.Translation = temp;
+        }
+         //when player hits a
+        if(Zero.Keyboard.KeyIsPressed(Keys.A))
+        {
+            //player move left
+            //Console.WriteLine("you press A");
+            var temp = this.Owner.Transform.Translation;
+            temp.X -=1;
+            this.Owner.Transform.Translation = temp;
+        }
+
+    }
+}
