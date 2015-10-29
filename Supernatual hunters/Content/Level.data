@@ -147,8 +147,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 0],
-			Vec3 Scale = [0.5, 0.5, 1],
+			Vec3 Translation = [-0.5, -0.5, 0],
+			Vec3 Scale = [1.5, 1.5, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -161,7 +161,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "561bf831c4693b82:player",
+			string SpriteSource = "5625aaa6b1fa3235:BasicPlayer1",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -203,7 +203,11 @@ Level =
 		Destroy = 
 		{
 		},
-		BoxCollider = 
+		Heath = 
+		{
+			int Health = 20,
+		},
+		MultiConvexMeshCollider = 
 		{
 			bool Ghost = false,
 			bool SendsMessages = true,
@@ -211,11 +215,7 @@ Level =
 			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 			Vec3 Offset = [0, 0, 0],
-			Vec3 Size = [3, 3, 0.5],
-		},
-		Heath = 
-		{
-			int Health = 20,
+			string MeshName = "5625aa5cde85c1c5:basicplayer",
 		},
 		Hierarchy = 
 		{

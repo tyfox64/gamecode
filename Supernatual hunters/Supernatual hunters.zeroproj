@@ -6,7 +6,7 @@ Cog =
 		string ProjectOwner = "",
 		string DefaultLevel = "Level",
 		string ProjectSpace = "Space",
-		string ProjectFolder = "\\student\student$\16.Tyrel.Davis\My Documents\ZeroProjects\Supernatual hunters",
+		string ProjectFolder = "C:\Users\16.Tyrel.Davis\Desktop\github\gamecode\Supernatual hunters",
 		uint ProjectEngineRevision = 12213,
 		bool AutoTakeProjectScreenshot = true,
 	},
