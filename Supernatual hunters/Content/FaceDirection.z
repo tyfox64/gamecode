@@ -16,7 +16,7 @@ class FaceDirection : ZilchComponent
             //Console.WriteLine("you hit down");
             var temp = this.Owner.Transform;
             this.Owner.Sprite.FlipX = false;
-            this.Owner.Sprite.SpriteSource = SpriteSource.Find("BasicPlayer1");
+            this.Owner.Sprite.SpriteSource = SpriteSource.Find("basicplayer1");
         }
         //if player hit up key.
         if(Zero.Keyboard.KeyIsPressed(Keys.W))
@@ -34,9 +34,8 @@ class FaceDirection : ZilchComponent
             //player face left.
             //Console.WriteLine("you hit left");
             var temp = this.Owner.Transform;
-            this.Owner.Sprite.FlipY = false;
-            this.Owner.Sprite.SpriteSource = SpriteSource.Find("player 1");
-            this.Owner.Sprite.FlipX = true;
+            this.Owner.Sprite.SpriteSource = SpriteSource.Find("basicplayer3");
+            this.Owner.Sprite.FlipX = false;
         }
         //if player hit right key.
         if(Zero.Keyboard.KeyIsPressed(Keys.D))
@@ -44,7 +43,6 @@ class FaceDirection : ZilchComponent
             //player face right.
             //Console.WriteLine("you hit right");
             var temp = this.Owner.Transform;
-            this.Owner.Sprite.FlipY = false;
             this.Owner.Sprite.SpriteSource = SpriteSource.Find("player 1");
             this.Owner.Sprite.FlipX = false;
         }

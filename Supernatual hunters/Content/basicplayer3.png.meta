@@ -2,15 +2,15 @@ ImageContent =
 {
 	SpriteSourceBuilder = 
 	{
-		string Name = "basicplayer1",
-		uint64 ResourceId = 562472fd0e126772,
+		string Name = "basicplayer3",
+		uint64 ResourceId = 5624721308523e89,
 		uint64 AtlasId = 5274cf95e4a661fd,
-		uint FrameSizeX = 130,
-		uint FrameSizeY = 202,
+		uint FrameSizeX = 83,
+		uint FrameSizeY = 206,
 		uint FrameCount = 1,
 		float FrameDelay = 0.0833333,
-		float OriginX = 65,
-		float OriginY = 101,
+		float OriginX = 41,
+		float OriginY = 103,
 		float PixelsPerUnit = 64,
 		bool Smoothing = false,
 		bool Looping = true,
