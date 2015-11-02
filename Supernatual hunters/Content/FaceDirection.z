@@ -17,6 +17,7 @@ class FaceDirection : ZilchComponent
             var temp = this.Owner.Transform;
             this.Owner.Sprite.FlipX = false;
             this.Owner.Sprite.SpriteSource = SpriteSource.Find("basicplayer1");
+            this.Owner.MultiConvexMeshCollider.Mesh = MultiConvexMesh.Find("basicplayer");
         }
         //if player hit up key.
         if(Zero.Keyboard.KeyIsPressed(Keys.W))
@@ -26,6 +27,7 @@ class FaceDirection : ZilchComponent
             var temp = this.Owner.Transform;
             this.Owner.Sprite.FlipX = true;
             this.Owner.Sprite.SpriteSource = SpriteSource.Find("basicplayer2");
+            this.Owner.MultiConvexMeshCollider.Mesh = MultiConvexMesh.Find("PLAYER2");
             
         }
         //if player hit left key.
@@ -36,6 +38,7 @@ class FaceDirection : ZilchComponent
             var temp = this.Owner.Transform;
             this.Owner.Sprite.SpriteSource = SpriteSource.Find("basicplayer3");
             this.Owner.Sprite.FlipX = false;
+            this.Owner.MultiConvexMeshCollider.Mesh = MultiConvexMesh.Find("PLAYER3");
         }
         //if player hit right key.
         if(Zero.Keyboard.KeyIsPressed(Keys.D))
@@ -43,8 +46,9 @@ class FaceDirection : ZilchComponent
             //player face right.
             //Console.WriteLine("you hit right");
             var temp = this.Owner.Transform;
-            this.Owner.Sprite.SpriteSource = SpriteSource.Find("player 1");
+            this.Owner.Sprite.SpriteSource = SpriteSource.Find("basicplayer4");
             this.Owner.Sprite.FlipX = false;
+            this.Owner.MultiConvexMeshCollider.Mesh = MultiConvexMesh.Find("PLAYER4");
         }
      }
 }

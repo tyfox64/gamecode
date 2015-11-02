@@ -2,8 +2,8 @@ BinaryContent =
 {
 	BinaryBuilder = 
 	{
-		string Name = "player",
-		uint64 ResourceId = 563054ecec0f0333,
+		string Name = "PLAYER4",
+		uint64 ResourceId = 56244afdc60fbcdf,
 		string LoaderType = "MultiConvexMesh",
 		uint Version = 0,
 		string FilterTag = "",

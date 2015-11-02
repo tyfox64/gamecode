@@ -1,0 +1,11 @@
+DataContent = 
+{
+	DataBuilder = 
+	{
+		string Name = "hevvy",
+		uint64 ResourceId = 5624439c2bd3f86b,
+		string LoaderType = "PhysicsMaterial",
+		uint Version = 0,
+		bool ShowInEditor = true,
+	},
+},
